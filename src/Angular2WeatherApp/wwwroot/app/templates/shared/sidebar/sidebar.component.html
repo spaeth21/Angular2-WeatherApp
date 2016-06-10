@@ -1,0 +1,29 @@
+﻿
+<ul id="nav-mobile" class="side-nav fixed customSideBar font" [class.minibar]="sideBarOpen === false" (mouseenter)="onToggleSideBar(true)" (mouseleave)="onToggleSideBar(false)">
+ 
+        <ul *ngFor="let item of menuItems">
+            <li *ngIf="item.logo" [routerLink]="[item.link]" style="height: 64px;">
+                <img [src]="item.img" style="top: 15%;position:relative" [style.width]="sideBarOpen ? '40px' : '40px'" [style.height]="sideBarOpen ? '40px' : '40px'" />
+            </li>
+            <li *ngIf="!item.logo && !item.dropdown" [routerLink]="[item.link]" [class.active]="router.isRouteActive(router.generate([item.link]))">
+                <div class="sideNavSpacing"><span [class.fa-2x]="sideBarOpen" class="fa fa-stack"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa {{item.icon}} fa-stack-1x"></i></span><span class="hideText" [class.hideTextActive]="sideBarOpen">{{item.name}}</span></div>
+            </li>
+            <li *ngIf="!item.logo && !item.dropdown" class="divider"></li>
+            <li *ngIf="item.dropdown" class="dropdown" id="sideBarIcon" [class.active]="checkActive(item.dropdownItems)">
+
+                <div class="sideNavSpacing">
+                    <span data-toggle="dropdown" role="menu" aria-haspopup="true" aria-expanded="false" [class.fa-2x]="sideBarOpen" class="fa fa-stack"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa {{item.icon}} fa-stack-1x"></i></span><span class="hideText" [class.hideTextActive]="sideBarOpen">{{item.name}}</span>
+                    <ul class="dropdown-menu panelColor openRight">
+                        <div>
+                            <ul  *ngFor="let sub of item.dropdownItems; let i = index" style="font-size: 10px">
+                                <li [class.active]="router.isRouteActive(router.generate([sub.link]))" [routerLink]="[sub.link]" class="sideBarDropDown"><i class="fa {{sub.icon}}" style="margin-right: 10px;"></i>{{sub.name}}</li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </li>
+            <li *ngIf="item.dropdown" class="divider"></li>
+        </ul>
+
+</ul>
+

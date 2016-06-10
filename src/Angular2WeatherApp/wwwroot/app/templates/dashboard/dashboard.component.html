@@ -1,0 +1,42 @@
+﻿<weather-header>
+    <left>
+        <h4>Developer.WeatherSource Data</h4>
+    </left>
+    <right>
+        <div class="col l10 input-field">
+            <input id="search" type="text" class="validate" [(ngModel)]="search"/>
+            <label for="search">Search By Zip Code</label>
+        </div>
+        <div class="col l2">
+            <button class="btn btn-success" (click)="executeSearch()">Search</button>
+        </div>
+    </right>
+    <center>
+        <label>Enter zip code in input box and press search to display 3 weeks of data for given zip code area.</label>
+    </center>
+</weather-header>
+
+<div class="row">
+    <div class="col l12" *ngIf="chartDataHumid">
+        <div class="left">
+            <h4>Humidity Data for {{search}}</h4>
+        </div>
+        <div class="right"><h4>Temperature Data for {{search}}</h4></div>
+    </div>
+    <div class="col l6">
+        <p-chart *ngIf="chartDataHumid" type="bar" [data]="chartDataHumid"></p-chart>
+    </div>
+    <div class="col l6">
+        <p-chart *ngIf="chartDataTemp" type="bar" [data]="chartDataTemp"></p-chart>
+    </div>
+</div>
+<div class="row">
+    <div class="col l12" *ngIf="chartDataWind">
+        <div class="center">
+            <h4>Wind Data for {{search}}</h4>
+        </div>
+    </div>
+    <div class="col l12">
+        <p-chart *ngIf="chartDataWind" type="line" [data]="chartDataWind"></p-chart>
+    </div>
+</div>

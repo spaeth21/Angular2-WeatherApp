@@ -1,0 +1,24 @@
+﻿.secondaryPageHeader {
+    position: relative;
+    background: #dfdada;
+    overflow: hidden;
+    left: -50px;
+    padding-left: 100px;
+    padding-right: 10%;
+    padding-bottom: 0;
+    max-height: 160px !important;
+    min-height: 100px;
+    width: 105%;
+    border: 3px solid #d4d1d1;
+    color: black;
+}
+
+.secondaryPageHeader > h2, h3, h1, h4 {
+    font-family: 'minya nouvelle rg';
+     color: #222936 !important;
+}
+
+@font-face {
+    font-family: 'minya nouvelle rg';
+    src: url('../fonts/minya nouvelle rg.ttf') format('truetype');
+}

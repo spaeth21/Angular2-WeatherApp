@@ -1,0 +1,57 @@
+{
+  "name": "angular2_weather_aspnet_core",
+  "version": "0.0.1",
+  "author": "Sean Higgins <sean.higgins1987@gmail.com>",
+  "scripts": {
+    "build": "webpack",
+    "compile": "tsc src/main.ts"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "1.0.1",
+    "gulp": "3.8.11",
+    "gulp-concat": "2.5.2",
+    "gulp-cssmin": "0.1.7",
+    "gulp-uglify": "1.2.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "2.17.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.7.0",
+    "raw-loader": "^0.5.1",
+    "rimraf": "2.2.8",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "ts-loader": "0.8.2",
+    "typescript": "1.8.9",
+    "typings": "0.8.1",
+    "webpack": "^1.13.1",
+    "webpack-merge": "0.12.0"
+  },
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.1",
+    "@angular/compiler": "2.0.0-rc.1",
+    "@angular/core": "2.0.0-rc.1",
+    "@angular/http": "2.0.0-rc.1",
+    "@angular/platform-browser": "2.0.0-rc.1",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.1",
+    "@angular/router": "2.0.0-rc.1",
+    "@angular/router-deprecated": "2.0.0-rc.1",
+    "angular2-materialize": "^3.0.0",
+    "es6-shim": "0.35.0",
+    "font-awesome": "4.6.3",
+    "hammerjs": "^2.0.8",
+    "materialize-css": "^0.97.6",
+    "ng2-bootstrap": "1.0.17",
+    "primeng": "1.0.0-beta.7",
+    "primeui": "4.1.12",
+    "reflect-metadata": "0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "0.6.6",
+    "chart.js": "2.1.4"
+  },
+  "-vs-binding": {
+    "BeforeBuild": [
+      "build"
+    ]
+  }
+}

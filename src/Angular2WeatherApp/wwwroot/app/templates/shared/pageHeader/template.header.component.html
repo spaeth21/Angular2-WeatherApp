@@ -1,0 +1,19 @@
+﻿
+    <div class="col l12 s12">
+        <div class="secondaryPageHeader">
+            <div class="row">
+                <div class="left">
+                    <ng-content select="left"></ng-content>
+                </div>
+                <div class="right" style="margin-top: 30px">
+                    <ng-content select="right"></ng-content>
+                </div>
+                <div class="center" >
+                    <ng-content select="center"></ng-content>
+                </div>
+            </div>
+            <div class="row">
+                <ng-content select="entire"></ng-content>
+            </div>
+        </div>
+    </div>

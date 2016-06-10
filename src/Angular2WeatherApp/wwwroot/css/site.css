@@ -1,0 +1,637 @@
+﻿
+
+/*Generic Main Styling*/
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: whitesmoke !important;
+}
+
+.footerContent {
+    background-color: #1A1E26;
+    color: #595F65;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+#loading {
+    top: 40%;
+    left: 50%;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+}
+
+.mainContent {
+    width: calc(100% - 60px);
+    left: 50px;
+    top: 90px;
+    position: absolute;
+    transition-duration: 500ms;
+    margin-bottom: 100px;
+}
+
+    .mainContent.active {
+        width: calc(100% - 130px);
+        left: 120px;
+        top: 90px;
+        position: absolute;
+        transition-duration: 500ms;
+    }
+
+.marginRow {
+    margin-bottom: 0px !important;
+}
+
+
+
+/*End Generic Main Styling*/
+
+/* Login keep input box smaller */
+.login input {
+    max-width: 280px;
+}
+
+/*End Login*/
+
+/*Menu-Bar Styling*/
+.menuBar-top {
+    color: white;
+    background-color: #1A1E26;
+    position: fixed;
+}
+
+.menuBar-icons {
+    color: #5894F2;
+}
+
+.menuBar-liSpacing {
+    width: 100px;
+    border-right: 1px solid #222936;
+    padding: 1px 0px;
+    height: 64px;
+}
+
+.panelColor {
+    background-color: #1A1E26 !important;
+    color: #595F65 !important;
+}
+
+    .panelColor > li > a {
+        background-color: #1A1E26 !important;
+        color: #595F65 !important;
+    }
+
+        .panelColor > li > a:hover {
+            background-color: #222936 !important;
+            color: #595F65 !important;
+        }
+
+.menuBarSideBarTransistion {
+    width: calc(100% - 30px);
+    left: 30px;
+    position: absolute;
+    z-index: 5;
+    transition-duration: 500ms;
+    background-color: #360E52;
+}
+
+    .menuBarSideBarTransistion.active {
+        width: calc(100% - 80px);
+        left: 80px;
+        position: absolute;
+        transition-duration: 500ms;
+        background-color: #360E52;
+    }
+
+/*This is also for sidebar dropdown animation*/
+.dropdown .dropdown-menu {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    -moz-transition: all 700ms ease;
+    -webkit-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    -ms-transition: all 700ms ease;
+    transition: all 700ms ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+/*End MenuBar Styling*/
+
+/*Button Styling*/
+.submitButtonColor {
+    background-color: #4060BD;
+    color: white;
+}
+
+button[disabled] {
+    cursor: not-allowed !important;
+}
+
+
+.panelTopButtons {
+    position: absolute;
+    top: 20px !important;
+    right: 2% !important;
+}
+
+.newButton {
+    padding: 0px 5px 0px 5px !important;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    background-color: #DE670F;
+}
+
+.panelBottomButtonsRight {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+}
+
+.panelBottomButtonsLeft {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+}
+
+/*End Button Styling*/
+
+.divider {
+    height: 1px;
+    overflow: hidden;
+    background-color: #222936;
+}
+
+hr {
+    border: black 1px solid;
+}
+
+/*Fonts*/
+.font {
+    font-family: 'moderne sans';
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+@font-face {
+    font-family: 'soucisansnf';
+    src: url('../fonts/soucisansnf.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'dream orphans';
+    src: url('../fonts/dream orphans.ttf') format('truetype');
+}
+
+h1, h2, h3, h4 {
+    font-family: 'dream orphans';
+    color: #222936 !important;
+}
+/*End Fonts*/
+
+
+
+
+
+/*PrimeNG Widget Styling Dialogs/Calendar etc.*/
+
+.ui-widget {
+    font-family: Segoe UI, Arial, sans-serif;
+    font-size: 1em;
+}
+
+    .ui-widget .ui-widget {
+        font-size: 1em;
+    }
+
+    .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+        font-family: Segoe UI, Arial, sans-serif;
+        font-size: 1em;
+        color: black;
+        border-radius: 3px;
+    }
+
+.ui-widget-content {
+    border: 1px solid #666666;
+    background-color: white;
+    color: black;
+}
+
+    .ui-widget-content a {
+        color: #ffffff;
+    }
+
+.ui-widget-header {
+    border: 1px solid #333333;
+    background: #333333;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+    .ui-widget-header a {
+        color: #ffffff;
+    }
+/*.ui-state-default {
+    background: transparent !important;
+    color: black;
+    border: none !important;
+}*/
+.ui-autocomplete-multiple {
+    border-bottom: 1px solid black !important;
+}
+.ui-tooltip {
+    background: #555555 !important;
+    color: white;
+}
+.ui-autocomplete, .ui-autocomplete-panel, .ui-autocomplete-input-token, .ui-autocomplete-token, .ui-autocomplete-token-label {
+    background: transparent !important;
+    color: black !important;
+}
+.ui-tooltip-arrow {
+    background: whitesmoke !important;
+}
+
+.ui-state-highlight {
+    background: #dfdfdf;
+}
+
+/*Interaction states
+----------------------------------*/
+/*.ui-state-default {
+    border: 1px solid #666666;
+    background: #555555;
+    font-weight: bold;
+    color: #eeeeee;
+}*/
+/*End PrimeNG Widget Styling*/
+
+
+
+/*Table Stripped Styling */
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #C1B7B4;
+}
+
+.table-striped > tbody {
+    background-color: #f9f9f9;
+    color: black;
+}
+
+    .table-striped > tbody > tr:hover, .table > tbody > tr:hover, .button:hover {
+        background-color: whitesmoke;
+        color: #5894F2;
+        cursor: pointer;
+    }
+/*End of Table Stripped Styling*/
+
+
+
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+.ui-complete,
+textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 15px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+}
+
+    input:not([type]):disabled, input:not([type])[readonly="readonly"],
+    input[type=text]:disabled,
+    input[type=text][readonly="readonly"],
+    input[type=password]:disabled,
+    input[type=password][readonly="readonly"],
+    input[type=email]:disabled,
+    input[type=email][readonly="readonly"],
+    input[type=url]:disabled,
+    input[type=url][readonly="readonly"],
+    input[type=time]:disabled,
+    input[type=time][readonly="readonly"],
+    input[type=date]:disabled,
+    input[type=date][readonly="readonly"],
+    input[type=datetime]:disabled,
+    input[type=datetime][readonly="readonly"],
+    input[type=datetime-local]:disabled,
+    input[type=datetime-local][readonly="readonly"],
+    input[type=tel]:disabled,
+    input[type=tel][readonly="readonly"],
+    input[type=number]:disabled,
+    input[type=number][readonly="readonly"],
+    input[type=search]:disabled,
+    .ui-complete:disabled,
+    input[type=search][readonly="readonly"],
+    textarea.materialize-textarea:disabled,
+    textarea.materialize-textarea[readonly="readonly"] {
+        color: rgba(0, 0, 0, 0.26);
+        border-bottom: 1px dotted rgba(0, 0, 0, 0.26);
+    }
+
+        input:not([type]):disabled + label,
+        input:not([type])[readonly="readonly"] + label,
+        input[type=text]:disabled + label,
+        input[type=text][readonly="readonly"] + label,
+        input[type=password]:disabled + label,
+        input[type=password][readonly="readonly"] + label,
+        input[type=email]:disabled + label,
+        input[type=email][readonly="readonly"] + label,
+        input[type=url]:disabled + label,
+        input[type=url][readonly="readonly"] + label,
+        input[type=time]:disabled + label,
+        input[type=time][readonly="readonly"] + label,
+        input[type=date]:disabled + label,
+        input[type=date][readonly="readonly"] + label,
+        input[type=datetime]:disabled + label,
+        input[type=datetime][readonly="readonly"] + label,
+        input[type=datetime-local]:disabled + label,
+        input[type=datetime-local][readonly="readonly"] + label,
+        input[type=tel]:disabled + label,
+        input[type=tel][readonly="readonly"] + label,
+        input[type=number]:disabled + label,
+        input[type=number][readonly="readonly"] + label,
+        input[type=search]:disabled + label,
+        input[type=search][readonly="readonly"] + label,
+        textarea.materialize-textarea:disabled + label,
+        textarea.materialize-textarea[readonly="readonly"] + label {
+            color: rgba(0, 0, 0, 0.26);
+        }
+
+    input:not([type]):focus:not([readonly]),
+    input[type=text]:focus:not([readonly]),
+    input[type=password]:focus:not([readonly]),
+    input[type=email]:focus:not([readonly]),
+    input[type=url]:focus:not([readonly]),
+    input[type=time]:focus:not([readonly]),
+    input[type=date]:focus:not([readonly]),
+    input[type=datetime]:focus:not([readonly]),
+    input[type=datetime-local]:focus:not([readonly]),
+    input[type=tel]:focus:not([readonly]),
+    input[type=number]:focus:not([readonly]),
+    input[type=search]:focus:not([readonly]),
+    .ui-complete:focus,
+    textarea.materialize-textarea:focus:not([readonly]) {
+        border-bottom: 1px solid #26a69a;
+        box-shadow: 0 1px 0 0 #26a69a;
+    }
+
+        input:not([type]):focus:not([readonly]) + label,
+        input[type=text]:focus:not([readonly]) + label,
+        input[type=password]:focus:not([readonly]) + label,
+        input[type=email]:focus:not([readonly]) + label,
+        input[type=url]:focus:not([readonly]) + label,
+        input[type=time]:focus:not([readonly]) + label,
+        input[type=date]:focus:not([readonly]) + label,
+        input[type=datetime]:focus:not([readonly]) + label,
+        input[type=datetime-local]:focus:not([readonly]) + label,
+        input[type=tel]:focus:not([readonly]) + label,
+        input[type=number]:focus:not([readonly]) + label,
+        input[type=search]:focus:not([readonly]) + label,
+        .ui-complete:focus:not([readonly]) + label,
+        textarea.materialize-textarea:focus:not([readonly]) + label {
+            color: #26a69a;
+        }
+
+        input:not([type]).valid, input:not([type]):focus.valid,
+        input[type=text].valid,
+        input[type=text]:focus.valid,
+        input[type=password].valid,
+        input[type=password]:focus.valid,
+        input[type=email].valid,
+        input[type=email]:focus.valid,
+        input[type=url].valid,
+        input[type=url]:focus.valid,
+        input[type=time].valid,
+        input[type=time]:focus.valid,
+        input[type=date].valid,
+        input[type=date]:focus.valid,
+        input[type=datetime].valid,
+        input[type=datetime]:focus.valid,
+        input[type=datetime-local].valid,
+        input[type=datetime-local]:focus.valid,
+        input[type=tel].valid,
+        input[type=tel]:focus.valid,
+        input[type=number].valid,
+        input[type=number]:focus.valid,
+        input[type=search].valid,
+        .ui-complete.valid,
+        .ui-complete:focus.valid,
+        input[type=search]:focus.valid,
+        textarea.materialize-textarea.valid,
+        textarea.materialize-textarea:focus.valid {
+            border-bottom: 1px solid #4CAF50;
+            box-shadow: 0 1px 0 0 #4CAF50;
+        }
+
+            input:not([type]).valid + label:after,
+            input:not([type]):focus.valid + label:after,
+            input[type=text].valid + label:after,
+            input[type=text]:focus.valid + label:after,
+            input[type=password].valid + label:after,
+            input[type=password]:focus.valid + label:after,
+            input[type=email].valid + label:after,
+            input[type=email]:focus.valid + label:after,
+            input[type=url].valid + label:after,
+            input[type=url]:focus.valid + label:after,
+            input[type=time].valid + label:after,
+            input[type=time]:focus.valid + label:after,
+            input[type=date].valid + label:after,
+            input[type=date]:focus.valid + label:after,
+            input[type=datetime].valid + label:after,
+            input[type=datetime]:focus.valid + label:after,
+            input[type=datetime-local].valid + label:after,
+            input[type=datetime-local]:focus.valid + label:after,
+            input[type=tel].valid + label:after,
+            input[type=tel]:focus.valid + label:after,
+            input[type=number].valid + label:after,
+            input[type=number]:focus.valid + label:after,
+            input[type=search].valid + label:after,
+            input[type=search]:focus.valid + label:after,
+            textarea.materialize-textarea.valid + label:after,
+            textarea.materialize-textarea:focus.valid + label:after {
+                content: attr(data-success);
+                color: #4CAF50;
+                opacity: 1;
+            }
+
+    input:not([type]).invalid, input:not([type]):focus.invalid,
+    input[type=text].invalid,
+    input[type=text]:focus.invalid,
+    input[type=password].invalid,
+    input[type=password]:focus.invalid,
+    input[type=email].invalid,
+    input[type=email]:focus.invalid,
+    input[type=url].invalid,
+    input[type=url]:focus.invalid,
+    input[type=time].invalid,
+    input[type=time]:focus.invalid,
+    input[type=date].invalid,
+    input[type=date]:focus.invalid,
+    input[type=datetime].invalid,
+    input[type=datetime]:focus.invalid,
+    input[type=datetime-local].invalid,
+    input[type=datetime-local]:focus.invalid,
+    input[type=tel].invalid,
+    input[type=tel]:focus.invalid,
+    input[type=number].invalid,
+    input[type=number]:focus.invalid,
+    input[type=search].invalid,
+    input[type=search]:focus.invalid,
+    textarea.materialize-textarea.invalid,
+    textarea.materialize-textarea:focus.invalid {
+        border-bottom: 1px solid #F44336;
+        box-shadow: 0 1px 0 0 #F44336;
+    }
+
+        input:not([type]).invalid + label:after,
+        input:not([type]):focus.invalid + label:after,
+        input[type=text].invalid + label:after,
+        input[type=text]:focus.invalid + label:after,
+        input[type=password].invalid + label:after,
+        input[type=password]:focus.invalid + label:after,
+        input[type=email].invalid + label:after,
+        input[type=email]:focus.invalid + label:after,
+        input[type=url].invalid + label:after,
+        input[type=url]:focus.invalid + label:after,
+        input[type=time].invalid + label:after,
+        input[type=time]:focus.invalid + label:after,
+        input[type=date].invalid + label:after,
+        input[type=date]:focus.invalid + label:after,
+        input[type=datetime].invalid + label:after,
+        input[type=datetime]:focus.invalid + label:after,
+        input[type=datetime-local].invalid + label:after,
+        input[type=datetime-local]:focus.invalid + label:after,
+        input[type=tel].invalid + label:after,
+        input[type=tel]:focus.invalid + label:after,
+        input[type=number].invalid + label:after,
+        input[type=number]:focus.invalid + label:after,
+        input[type=search].invalid + label:after,
+        input[type=search]:focus.invalid + label:after,
+        textarea.materialize-textarea.invalid + label:after,
+        textarea.materialize-textarea:focus.invalid + label:after {
+            content: attr(data-error);
+            color: #F44336;
+            opacity: 1;
+        }
+
+    input:not([type]).validate + label,
+    input[type=text].validate + label,
+    input[type=password].validate + label,
+    input[type=email].validate + label,
+    input[type=url].validate + label,
+    input[type=time].validate + label,
+    input[type=date].validate + label,
+    input[type=datetime].validate + label,
+    input[type=datetime-local].validate + label,
+    input[type=tel].validate + label,
+    input[type=number].validate + label,
+    input[type=search].validate + label,
+    textarea.materialize-textarea.validate + label {
+        width: 100%;
+        pointer-events: none;
+    }
+
+    input:not([type]) + label:after,
+    input[type=text] + label:after,
+    input[type=password] + label:after,
+    input[type=email] + label:after,
+    input[type=url] + label:after,
+    input[type=time] + label:after,
+    input[type=date] + label:after,
+    input[type=datetime] + label:after,
+    input[type=datetime-local] + label:after,
+    input[type=tel] + label:after,
+    input[type=number] + label:after,
+    input[type=search] + label:after,
+    .ui-complete + label:after,
+    textarea.materialize-textarea + label:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 65px;
+        opacity: 0;
+        transition: .2s opacity ease-out, .2s color ease-out;
+    }
+
+#editPencil {
+    color: #e7e7e7;
+    transition-duration: .5s;
+}
+
+    #editPencil:hover {
+        color: black;
+        transition-duration: .5s;
+        cursor: pointer;
+    }
+
+#openDialog {
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+    #openDialog:hover {
+        cursor: pointer;
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+        -webkit-transition-duration: .5s;
+        -moz-transition-duration: .5s;
+        -ms-transition-duration: .5s;
+        -o-transition-duration: .5s;
+        transition-duration: .5s;
+    }
+
+.suggestions {
+    position: absolute;
+    border: solid black 1px;
+    z-index: 10;
+    width: 100%;
+    background: #f0efef;
+    color: black;
+    box-shadow: 0 1px 10px rgba(0, 0, 0.0, 0.4);
+}
+.suggestions > ul >li {
+    padding: 10px;
+    vertical-align: middle;
+}
+.suggestions > ul > li:hover {
+    background: #a19999;
+    font-weight: bolder;
+}
+
+.customToolTip {
+    padding: 5px 10px;
+    background: #555555 !important;
+    color: white;
+}

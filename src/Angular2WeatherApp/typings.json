@@ -1,0 +1,9 @@
+﻿{
+  "name": "safety_compliance_core",
+  "version": false,
+  "dependencies": { },
+  "ambientDependencies": {
+    "es6-shim": "registry:dt/es6-shim#0.31.2+20160317120654",
+    "require": "github:DefinitelyTyped/DefinitelyTyped/requirejs/require.d.ts#853544cb7068af64bdb10ef1ae0c54d3aa3a80f6"
+  }
+}

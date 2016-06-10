@@ -1,0 +1,11 @@
+﻿
+
+<weather-navbar [sideBarOpen]="sideBarPosition"></weather-navbar>
+
+<weather-sidebar (toggleValue)="onSideBarAction($event)" [menuItems]="menu"></weather-sidebar>
+<div class="mainContent" [class.active]="defaultContent">
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+
+</div>
